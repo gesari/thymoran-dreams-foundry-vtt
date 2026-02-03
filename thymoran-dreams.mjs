@@ -1,17 +1,17 @@
 // Import document classes
-import { ThymoranDreamsActor } from './documents/actor.mjs';
-import { ThymoranDreamsItem } from './documents/item.mjs';
+import { ThymoranDreamsActor } from './modules/documents/actor.mjs';
+import { ThymoranDreamsItem } from './modules/documents/item.mjs';
 
 // Import sheet classes
-import { ThymoranDreamsActorSheet } from './sheets/actor-sheet.mjs';
-import { ThymoranDreamsItemSheet } from './sheets/item-sheet.mjs';
+import { ThymoranDreamsActorSheet } from './modules/sheets/actor-sheet.mjs';
+import { ThymoranDreamsItemSheet } from './modules/sheets/item-sheet.mjs';
 
 // Import helper/utility classes/constants
-import { THYMORANDREAMS } from './helpers/config.mjs';
+import { THYMORANDREAMS } from './modules/helpers/config.mjs';
 
 
 // Import DataModel classes
-import * as models from './data/_module.mjs';
+import * as models from './modules/data/_module.mjs';
 
 const collections = foundry.documents.collections;
 const sheets = foundry.appv1.sheets;
