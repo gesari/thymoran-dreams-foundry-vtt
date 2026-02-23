@@ -41,5 +41,19 @@
 
     "packs": [{}],
 
-    "documentTypes": {}
+    "documentTypes": {
+        "Actor": {
+            "pc": {
+                "htmlFields": ["attributes"]
+            },
+            "npc": {
+                "htmlFields": ["attributes"]
+            }
+        },
+        "Item": {
+            "talisman": {
+                "htmlFields": ["description"]
+            }
+        }
+    }
 }
