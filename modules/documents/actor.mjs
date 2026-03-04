@@ -12,7 +12,11 @@ export class ThymoranDreamsActor extends Actor {
     /** @override */
     prepareBaseData() {
         // Data modifications here occur before processing embedded docs or derived data
+        // From Wiki : if you need an Active Effect to modify a derived value, you can initialize or calculate the derived value in this step (such as an ability score modifier) so that the Active Effect can modify it later.
     }
+
+    // MAY NEED TO ADD IN prepareEmbeddedDocuments() OVERRIDE IN ORDER TO ADD IN STATS FROM ITEMS / SKILLS / EFFECTS
+    // From Wiki: this.prepareEmbeddedDocuments(); Prepare all embedded Documents within the parent Document, such as owned Items or Active Effects. Additionally, Active Effects are called in a submethod of this called this.applyActiveEffects(); which can be overridden.
 
     /**
      * @override
@@ -22,6 +26,8 @@ export class ThymoranDreamsActor extends Actor {
     prepareDerivedData() {
         const actorData = this;
         const flags = actorData.flags.thymorandreams || {};
+
+        // CALCULATE SECONDARIES HERE? - AFTER PRIMARIES / ITEMS / EFFECTS ADDED ON
     }
 
     /**
