@@ -8,6 +8,8 @@ const fields = foundy.data.fields;
 
 export default class ThymoranDreamsActorBase extends ThymoranDreamsSystemModel {
     /** @inheritdoc */
+    static LOCALIZATION_PREFIXES = ["THYMORANDREAMS.Actor.base"];
+    
     static defineSchema() {
         const schema = {};
 
