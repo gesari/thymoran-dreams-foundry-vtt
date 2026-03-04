@@ -35,9 +35,9 @@ export class ThymoranDreamsActorSheet extends api.HandlebarsApplicationMixin(she
             // Boilerplate uses Foundry-provided template, can copy from templates/generic/tab-navigation.hbs
             template: 'systems/thymoran-dreams/templates/actor/tab-nav.hbs',
         },
-        primary: {
+        primaries: {
             // stats tab with modifiers and buttons for applicable standard actions (boost, counter, free-cast, recharge, stabilize)
-            template: 'systems/thymoran-dreams/templates/actor/primary.hbs',
+            template: 'systems/thymoran-dreams/templates/actor/primaries.hbs',
             scrollable: [""],
         },
         attributes: {
@@ -65,7 +65,7 @@ export class ThymoranDreamsActorSheet extends api.HandlebarsApplicationMixin(she
     _configureRenderOptions(options) {
         super._configureRenderOptions(options);
         // Not all parts always render
-        options.parts = ['header', 'tabs', 'primary'];
+        options.parts = ['header', 'tabs', 'primaries'];
         // Don't show other tabs if only limited view
         if (this.document.limited) return;
         // Control which parts show based on doc subtype
@@ -111,7 +111,7 @@ export class ThymoranDreamsActorSheet extends api.HandlebarsApplicationMixin(she
     /** @override */
     async _preparePartContext(partId, context) {
         switch (partId) {
-            case 'primary':
+            case 'primaries':
                 context.tab = context.tabs[partId];
                 break;
             case 'attributes':
@@ -176,9 +176,9 @@ export class ThymoranDreamsActorSheet extends api.HandlebarsApplicationMixin(she
                 case 'header':
                 case 'tabs':
                     return tabs;
-                case 'primary':
-                    tab.id = 'primary';
-                    tab.label += 'Primary';
+                case 'primaries':
+                    tab.id = 'primaries';
+                    tab.label += 'Primaries';
                     break;
                 case 'attributes':
                     tab.id = 'attributes';
