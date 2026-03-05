@@ -32,8 +32,8 @@ export class ThymoranDreamsActorSheet extends api.HandlebarsApplicationMixin(she
             template: 'systems/thymoran-dreams/templates/actor/header.hbs',
         },
         tabs: {
-            // Boilerplate uses Foundry-provided template, can copy from templates/generic/tab-navigation.hbs
-            template: 'systems/thymoran-dreams/templates/actor/tab-nav.hbs',
+            // Copied Foundry provided template from templates/generic/tab-navigation.hbs
+            template: 'systems/thymoran-dreams/templates/tab-nav.hbs',
         },
         primaries: {
             // stats tab with modifiers and buttons for applicable standard actions (boost, counter, free-cast, recharge, stabilize)
